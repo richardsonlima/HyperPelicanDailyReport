@@ -25,9 +25,10 @@ Create Hyper Pelican Environment
     mkdir -p /home/hyperpelican/scripts/html/dailyreport
     cp -R html/stylebase /home/hyperpelican/scripts/html/dailyreport/
     cp -R html/sendmail /home/hyperpelican/scripts/html/dailyreport/
-    cp hyperpelian-sendmail.sh /home/hyperpelian/scripts/
+    cp hyperpelian-sendmail.sh /home/hyperpelican/scripts/dailyreport/
+    cp minion.sh /home/hyperpelican/scripts/dailyreport/
     mkdir -p /home/hyperpelian/scripts/serverlist/
-    touch /home/hyperpelian/scripts/serverlist/servers.txt
+    touch /home/hyperpelian/serverlist/servers.txt
     ssh-keygen -t rsa -C "HyperPelican"
     export EDITOR="vim"
     export VISUAL="vim"
@@ -36,7 +37,7 @@ Create Hyper Pelican Environment
     
     #!/bin/bash
     user="hyperpelican"
-    for i in $(cat /home/hyperpelican/scripts/serverlist/servers.txt);
+    for i in $(cat /home/hyperpelican/serverlist/servers.txt);
     do 
      ssh-copy-id -p 22 $user@$i;
     done
