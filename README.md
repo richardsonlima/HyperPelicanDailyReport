@@ -22,9 +22,9 @@ Create Hyper Pelican Environment
 ------------
 
     cd ~/HyperPelicanDailyReport
-    mkdir -p /home/hyperpelican/scripts/html/stylebase
-    cp -R html/stylebase/* /home/hyperpelican/scripts/html/stylebase/
-    cp -R html/sendmail /home/hyperpelican/scripts/html/
+    mkdir -p /home/hyperpelican/scripts/html/dailyreport
+    cp -R html/stylebase /home/hyperpelican/scripts/html/dailyreport/
+    cp -R html/sendmail /home/hyperpelican/scripts/html/dailyreport/
     cp hyperpelian-sendmail.sh /home/hyperpelian/scripts/
     mkdir -p /home/hyperpelian/scripts/serverlist/
     touch /home/hyperpelian/scripts/serverlist/servers.txt
