@@ -1,11 +1,11 @@
 #!/bin/bash
 #title           :hyperpelican.sh
 #description     :This script will helps you to create a html reports for your Linux virtual machines across different clouds.
-#author		 :Richardson Lima
+#author	     :Richardson Lima
 #email           :contatorichardsonlima@gmail.com
 #date            :20150102
-#version         :0.3    
-#usage		 :bash hyperpelican.sh
+#version         :0.1    
+#usage	     :bash hyperpelican.sh
 #notes           :
 #bash_version    :4.3-1-release
 #==============================================================================
