@@ -23,7 +23,9 @@ Create Hyper Pelican Environment
 
     cd ~/HyperPelicanDailyReport
     mkdir -p /home/hyperpelican/scripts/html/stylebase
-    cp -R stylebase /home/hyperpelican/scripts/html/stylebase
+    cp -R html/stylebase/* /home/hyperpelican/scripts/html/stylebase/
+    cp -R html/sendmail /home/hyperpelican/scripts/html/
+    cp hyperpelian-sendmail.sh /home/hyperpelian/scripts/
     mkdir -p /home/hyperpelian/scripts/serverlist/
     touch /home/hyperpelian/scripts/serverlist/servers.txt
     ssh-keygen -t rsa -C "HyperPelican"
@@ -48,3 +50,8 @@ run crontab -e and add this lines below
 For example, you can run a report at 9 a.m every week with:
 
 0 9 * * 1 /home/hyperpelican/scripts/dailyreport/hyperpelican.sh |tee -a /tmp/hyperpelican-debug.log
+
+Send reports to e-mail
+------------
+Run:
+    bash /home/hyperpelian/scripts/hyperpelian-sendmail.sh 
