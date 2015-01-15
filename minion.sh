@@ -4,7 +4,7 @@
 #author		 :Richardson Lima
 #email           :contatorichardsonlima@gmail.com
 #date            :20150102
-#version         :0.3    
+#version         :0.1    
 #notes           :bash hyperpelican.sh
 #bash_version    :4.3-1-release
 #==============================================================================
