@@ -16,7 +16,6 @@ Clone the repository
 To install the basic requirements to cloning in a Debian based distro do::
 
     sudo aptitude install git
-
     git clone https://github.com/richardsonlima/HyperPelicanDailyReport.git
     cd HyperPelicanDailyReport/
 
