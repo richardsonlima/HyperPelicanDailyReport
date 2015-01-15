@@ -1,0 +1,69 @@
+a, a > * ,
+ul#navlist li.current > a,
+ul#navlist li a:hover,
+ul#navlist li a.selected,
+#breadcrumbs a:hover,
+#sidebar .widget-title,
+.service-item h4 > div > span,
+.recent-posts .more,
+blockquote.speech-bubble span,
+.widget.twitter a,
+.widget.twitter a *,
+.toggle-title:hover,
+.toggle.open .toggle-title,
+.toggle.open .toggle-title:hover,
+.error-page,
+body.dark #footer .widget-title,
+.title-2 {
+	color: #0db0bf;
+}
+
+.portfolio-filter a:hover,
+.portfolio-filter a.selected,
+.portfolio-item a,
+.contact-form input[type="submit"],
+.pagenation li.active,
+.read-more,
+#footer,
+.service-item .learn-more,
+.widget.widget_tag_cloud a,
+.widget.flickr li a:hover,
+.toggle:before,
+.skill-bar-content,
+.team-member > span,
+.bx-controls-direction a:hover,
+body.dark .services .service-item,
+.service-item .learn-more,
+.button.color,
+.tp-caption.colored,
+.tp-caption .button,
+#back-to-top a {
+	background-color: #0db0bf;
+}
+
+blockquote:not(.speech-bubble),
+.sf-menu .sub-menu li:first-child,
+.author-avatar img,
+.service-item > h4:before,
+.team-member img,
+.title-1:before {
+	border-color: #0db0bf;
+}
+
+.title-1:after {
+	border-left-color: #0db0bf;
+}
+
+.tp-bullets .bullet.selected {
+	background-color: rgb(13,176,191);
+	background-color: rgba(13,176,191,0.9);
+}
+
+.tp-leftarrow:hover,
+.tp-rightarrow:hover {
+	background-color: rgb(13,176,191);
+	background-color: rgba(13,176,191,0.7);
+}
+
+::-moz-selection{ background: #0db0bf; }
+::selection { background: #0db0bf; } 
