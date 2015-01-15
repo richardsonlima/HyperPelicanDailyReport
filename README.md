@@ -17,5 +17,4 @@ run crontab -e and add this lines below
 
 For example, you can run a report at 9 a.m every week with:
 
-m h  dom mon dow   command
 0 9 * * 1 /home/hyperpelican/scripts/dailyreport/hyperpelican.sh |tee -a /tmp/hyperpelican-debug.log
