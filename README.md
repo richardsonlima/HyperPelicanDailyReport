@@ -17,8 +17,30 @@ To install the basic requirements to cloning in a Debian based distro do::
 
     sudo aptitude install git
     git clone https://github.com/richardsonlima/HyperPelicanDailyReport.git
-    cd HyperPelicanDailyReport/
 
+Create Hyper Pelican Environment
+------------
+
+    cd ~/HyperPelicanDailyReport
+    mkdir -p /home/hyperpelican/scripts/html/stylebase
+    cp -R stylebase /home/hyperpelican/scripts/html/stylebase
+    mkdir -p /home/hyperpelian/scripts/serverlist/
+    touch /home/hyperpelian/scripts/serverlist/servers.txt
+    ssh-keygen -t rsa -C "HyperPelican"
+    export EDITOR="vim"
+    export VISUAL="vim"
+    Ctrl+x+e
+    [ vim command ] Esc+i
+    
+    #!/bin/bash
+    user="hyperpelican"
+    for i in $(cat /home/hyperpelian/scripts/serverlist/servers.txt);
+    do 
+     ssh-copy-id -p 22 $user@$i;
+    done
+    
+    [ vim command ] :wq!
+    
 Scheduling
 ------------
 run crontab -e and add this lines below
