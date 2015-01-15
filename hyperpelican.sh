@@ -28,7 +28,7 @@ createbase(){
 }
 
 minion(){
-      for server in $(cat /home/hyperpelian/scripts/serverlist/servers.txt) ; 
+      for server in $(cat /home/hyperpelican/scripts/serverlist/servers.txt) ; 
       do 
        $ssh $sshport $user@$server < $base/minion.sh \
        | grep -vE "System load|System information as of|Documentation|Welcome to Ubuntu|Linux ubuntu-pangolim|SMP|\+\-\+\-\+\-" > $container/$timestamp/$server-DailyReport-$timestamp.html; 
