@@ -11,6 +11,15 @@ Installation
 Hyper Pelian is written in Shell Script and Html5. Currently it is tested and developed using
 Bash 4.3. The only system wide requirements are Bash interpreter. Git is used for revision control. 
 
+Clone the repository
+------------
+To install the basic requirements to cloning in a Debian based distro do::
+
+    sudo aptitude install git
+
+    git clone https://github.com/richardsonlima/HyperPelicanDailyReport.git
+    cd HyperPelicanDailyReport/
+
 Scheduling
 ------------
 run crontab -e and add this lines below
