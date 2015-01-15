@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Hyper Pelican Daily Report by richardsonlima</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Hyper Pelican Daily Report</h1>
+        <h2>Collect and Report Linux System Activity Information with Hyper Pelican Linux Daily Report</h2>
+        <a href="https://github.com/richardsonlima/HyperPelicanDailyReport" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h3>
+<a id="hyper-pelican-daily-report" class="anchor" href="#hyper-pelican-daily-report" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hyper Pelican Daily Report</h3>
+
+<p>Collect and report Linux System Activity Information with Hyper Pelican Linux Daily Report</p>
+
+<p>Hyper Pelican helps you create html reports for your Linux virtual machines across different clouds , using any device that can access the web. It is provided under the GNU AGPL v3.0 License. Created by Richardson Lima at <a href="http://blog.richardsonlima.com.br">http://blog.richardsonlima.com.br</a></p>
+
+<h3>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h3>
+
+<p>Hyper Pelian is written in Shell Script and Html5. Currently it is tested and developed using Bash 4.3. The only system wide requirements are Bash interpreter. Git is used for revision control.</p>
+
+<p>Clone the repository</p>
+
+<p>To install the basic requirements to cloning in a Debian based distro do::</p>
+
+<pre><code>sudo aptitude install git
+git clone https://github.com/richardsonlima/HyperPelicanDailyReport.git
+</code></pre>
+
+<h3>
+<a id="create-hyper-pelican-environment" class="anchor" href="#create-hyper-pelican-environment" aria-hidden="true"><span class="octicon octicon-link"></span></a>Create Hyper Pelican Environment</h3>
+
+<pre><code>cd ~/HyperPelicanDailyReport
+mkdir -p /home/hyperpelican/scripts/html/dailyreport
+cp -R html/stylebase /home/hyperpelican/scripts/html/dailyreport/
+cp -R html/sendmail /home/hyperpelican/scripts/html/dailyreport/
+cp hyperpelian-sendmail.sh /home/hyperpelican/scripts/dailyreport/
+cp minion.sh /home/hyperpelican/scripts/dailyreport/
+mkdir -p /home/hyperpelian/scripts/serverlist/
+touch /home/hyperpelian/serverlist/servers.txt
+ssh-keygen -t rsa -C "HyperPelican"
+</code></pre>
+
+<pre><code>export EDITOR="vim"
+export VISUAL="vim"
+Ctrl+x+e
+[ vim command ] Esc+i
+
+#!/bin/bash
+user="hyperpelican"
+for i in $(cat /home/hyperpelican/serverlist/servers.txt);
+do 
+ ssh-copy-id -p 22 $user@$i;
+done
+
+[ vim command ] :wq!
+</code></pre>
+
+<h3>
+<a id="scheduling" class="anchor" href="#scheduling" aria-hidden="true"><span class="octicon octicon-link"></span></a>Scheduling</h3>
+
+<p>run crontab -e and add this lines below</p>
+
+<p>For example, you can run a report at 9 a.m every week with:</p>
+
+<pre><code>0 9 * * 1 /home/hyperpelican/scripts/dailyreport/hyperpelican.sh |tee -a /tmp/hyperpelican-debug.log
+</code></pre>
+
+<h3>
+<a id="send-reports-to-e-mail" class="anchor" href="#send-reports-to-e-mail" aria-hidden="true"><span class="octicon octicon-link"></span></a>Send reports to e-mail</h3>
+
+<pre><code>Run: bash /home/hyperpelian/scripts/hyperpelian-sendmail.sh
+</code></pre>
+
+<h3>
+<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+
+<p>Created by Richardson Lima (<a href="https://github.com/richardsonlima" class="user-mention">@richardsonlima</a>) in Jan 2015.</p>
+
+<h3>
+<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+
+<p>Having trouble with Pages? Check out the documentation at <a href="https://github.com/richardsonlima/HyperPelicanDailyReport">https://github.com/richardsonlima/HyperPelicanDailyReport</a> or contact <a href="mailto:contatorichardsonlima@gmail.com">contatorichardsonlima@gmail.com</a> and we’ll help you sort it out.</p>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/richardsonlima/HyperPelicanDailyReport/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/richardsonlima/HyperPelicanDailyReport/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/richardsonlima/HyperPelicanDailyReport"></a> is maintained by <a href="https://github.com/richardsonlima">richardsonlima</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
