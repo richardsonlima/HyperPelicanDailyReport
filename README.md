@@ -34,7 +34,7 @@ Create Hyper Pelican Environment
     
     #!/bin/bash
     user="hyperpelican"
-    for i in $(cat /home/hyperpelian/scripts/serverlist/servers.txt);
+    for i in $(cat /home/hyperpelican/scripts/serverlist/servers.txt);
     do 
      ssh-copy-id -p 22 $user@$i;
     done
