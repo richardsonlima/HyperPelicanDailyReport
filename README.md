@@ -1,4 +1,4 @@
-# HyperPelicanDailyReport
+# Hyper Pelican Daily Report
 Collect and report Linux System Activity Information with Hyper Pelican Linux Daily Report
 
 Hyper Pelican helps you create html reports for your Linux virtual machines across different
