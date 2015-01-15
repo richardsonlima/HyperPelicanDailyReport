@@ -17,7 +17,7 @@ user='hyperpelican'
 sshport='22'   
 
 timestamp=$(date +"%d-%m-%Y")
-stylebase="/home/hyperpelican/scripts/html/stylebase"
+stylebase="/home/hyperpelican/scripts/html/dailyreport/stylebase"
 base="/home/hyperpelican/scripts/dailyreport"
 container="/home/hyperpelican/DailyReports"
 ssh='ssh -T -p' 
