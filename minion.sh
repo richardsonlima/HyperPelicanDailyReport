@@ -419,8 +419,7 @@ cat << CHECKJBOSS
 <SMALL>
 <PRE>
 CHECKJBOSS
-
-if [ -z "$(ps -ef | grep java | grep jboss |grep -v grep)" ]
+if [ -z "$(ps -ef | grep 'jboss' |grep -v grep)" ]
 then 
  echo "<font color="red"> JBoss is NOT running </font>"
 else
@@ -446,7 +445,7 @@ cat << CHECKTOMCAT
 <PRE>
 CHECKTOMCAT
 
-if [ -z "$(ps -ef | grep java | grep tomcat |grep -v grep)" ]
+if [ -z "$(ps -ef | grep 'tomcat' |grep -v grep)" ]
 then 
  echo "<font color="red"> Tomcat is NOT running </font>"
 else
@@ -469,16 +468,16 @@ cat << CHECKAPACHE
 <PRE>
 CHECKAPACHE
 
-if [ -z "$(ps -ef | grep java | grep apache |grep apache2 |grep http |grep httpd |grep -v grep)" ]
+if [ -z "$( ps -ef | grep 'apache2\|apache\|httpd\|http' |grep -v grep)" ]
 then 
  echo "<font color="red"> Apache is NOT running </font>"
 else
   echo "Apache is running"
         echo "<font color="red"> Number of Active Connections: </font>"
-        netstat -an | grep 80 | grep tcp | grep -v 0.0.0.0 | grep -v ::: | cut -d':' -f2 | cut -d' ' -f12 | sort | uniq | wc -l;
+        netstat -an | grep 80 | grep tcp | grep -v 0.0.0.0 | grep -v ::: | wc -l;
         echo;
-        echo "<font color="red"> Current Active IP's: </font>"
-        netstat -an | grep 80 | grep tcp | grep -v 0.0.0.0 | grep -v ::: | cut -d':' -f2 | cut -d' ' -f12 | sort | uniq;        
+        #echo "<font color="red"> Current Active IP's: </font>"
+        #netstat -an | grep 80 | grep tcp | grep -v 0.0.0.0 | grep -v ::: | cut -d':' -f2 | cut -d' ' -f12 | sort | uniq;       
 
 fi
 
