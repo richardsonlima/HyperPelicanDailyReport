@@ -28,9 +28,9 @@ Create Hyper Pelican Environment
     
 Init Script (Debian/Ubuntu Version)
 ------------
-cd ~/HyperPelicanDailyReport && sudo cp hyperpelican /etc/init.d && cd /etc/init.d
-* To add: sudo update-rc.d hyperpelican defaults
-* To remove: sudo update-rc.d -f hyperpelican remove
+     cd ~/HyperPelicanDailyReport && sudo cp hyperpelican /etc/init.d && cd /etc/init.d
+     * To add: sudo update-rc.d hyperpelican defaults
+     * To remove: sudo update-rc.d -f hyperpelican remove
     
 Scheduling
 ------------
@@ -38,9 +38,9 @@ run crontab -e and add this lines below
 
 For example, you can run a report at 9 a.m every week with:
 
-0 9 * * 1 /home/hyperpelican/scripts/dailyreport/hyperpelican.sh |tee -a /tmp/hyperpelican-debug.log
+     0 9 * * 1 /home/hyperpelican/scripts/dailyreport/hyperpelican.sh |tee -a /tmp/hyperpelican-debug.log
 
 Send reports to e-mail
 ------------
 Run:
-    bash /home/hyperpelian/scripts/hyperpelian-sendmail.sh 
+     bash /home/hyperpelian/scripts/hyperpelian-sendmail.sh 
