@@ -23,7 +23,10 @@ container="/home/hyperpelican/DailyReports"
 ssh='ssh -T -p' 
 
 createbase(){
-      mkdir -p $container/$timestamp 
+      if [ ! -d "$container" ]; then
+         mkdir -p $container
+      fi
+      mkdir -p $container/$timestamp
       cp -R $stylebase $container/$timestamp/
 }
 
