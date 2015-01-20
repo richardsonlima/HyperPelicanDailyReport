@@ -59,6 +59,13 @@ ssh-keygen -t rsa -C "HyperPelican"
 </code></pre>
 
 <h3>
+<a id="initscript"class="anchor" href="#initscript" aria-hidden="true"><span class="octicon octicon-link"></span></a>Init Script (Debian/Ubuntu Version)</h3>
+
+<p>cd ~/HyperPelicanDailyReport && sudo cp hyperpelican /etc/init.d && cd /etc/init.d</p>
+<p>* To add: sudo update-rc.d hyperpelican defaults</p>
+<p>* To remove: sudo update-rc.d -f hyperpelican remove</p>
+
+<h3>
 <a id="scheduling" class="anchor" href="#scheduling" aria-hidden="true"><span class="octicon octicon-link"></span></a>Scheduling</h3>
 
 <p>run crontab -e and add this lines below</p>
