@@ -29,10 +29,8 @@ Create Hyper Pelican Environment
 Init Script (Debian/Ubuntu Version)
 ------------
 cd ~/HyperPelicanDailyReport && sudo cp hyperpelican /etc/init.d && cd /etc/init.d
-* To add
-sudo update-rc.d hyperpelican defaults
-* To remove
-sudo update-rc.d -f hyperpelican remove
+* To add: sudo update-rc.d hyperpelican defaults
+* To remove: sudo update-rc.d -f hyperpelican remove
     
 Scheduling
 ------------
