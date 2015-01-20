@@ -1,32 +1,30 @@
 #!/bin/bash
 
-dir1="/home/hyperpelican/scripts/html/dailyreport"
-dir2="/home/hyperpelican/scripts/html/dailyreport"
-dir3="/home/hyperpelian/scripts/serverlist"
+htmldir="/home/hyperpelican/scripts/html/dailyreport"
+reportdir="/home/hyperpelican/scripts/dailyreport"
+serverlistdir="/home/hyperpelian/scripts/serverlist"
 
-cd ~/HyperPelicanDailyReport
-
-create_dir1(){
-      if [ ! -d "$dir1"] ;then 
-         mkdir -p $dir1
+create_htmldir(){
+      if [ ! -d "$htmldir"] ;then 
+         mkdir -p $htmldir
       fi
 }
 
-create_dir2(){
-      if [ ! -d "$dir2"] ;then 
-        mkdir -p $dir2
+create_reportdir(){
+      if [ ! -d "$reportdir"] ;then 
+        mkdir -p $reportdir
       fi
 }
 
-create_dir3(){
-      if [ ! -d "$dir3"] ;then 
-         mkdir -p $dir3
+create_serverlistdir(){
+      if [ ! -d "$serverlistdir"] ;then 
+         mkdir -p $serverlistdir
       fi
 }
 
-create_dir1
-create_dir2
-create_dir3
+create_htmldir
+create_reportdir
+create_serverlistdir
 
-cp -R html/stylebase $dir1 && cp -R html/sendmail $dir1 && cp hyperpelian-sendmail.sh $dir2 && cp minion.sh $dir2
-touch $dir3/servers.txt
+cp -R html/stylebase $htmldir && cp -R html/sendmail $htmldir && cp hyperpelian-sendmail.sh $reportdir && cp minion.sh $reportdir
+touch $serverlistdir/servers.txt
