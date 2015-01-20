@@ -42,5 +42,5 @@ For example, you can run a report at 9 a.m every week with:
 
 Send reports to e-mail
 ------------
-Run:
+Run: 
      bash /home/hyperpelian/scripts/hyperpelian-sendmail.sh 
