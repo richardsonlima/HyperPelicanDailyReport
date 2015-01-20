@@ -22,27 +22,9 @@ Create Hyper Pelican Environment
 ------------
 
     cd ~/HyperPelicanDailyReport
-    mkdir -p /home/hyperpelican/scripts/html/dailyreport
-    cp -R html/stylebase /home/hyperpelican/scripts/html/dailyreport/
-    cp -R html/sendmail /home/hyperpelican/scripts/html/dailyreport/
-    cp hyperpelian-sendmail.sh /home/hyperpelican/scripts/dailyreport/
-    cp minion.sh /home/hyperpelican/scripts/dailyreport/
-    mkdir -p /home/hyperpelian/scripts/serverlist/
-    touch /home/hyperpelian/serverlist/servers.txt
+    ./CreateEnv.sh
     ssh-keygen -t rsa -C "HyperPelican"
-    export EDITOR="vim"
-    export VISUAL="vim"
-    Ctrl+x+e
-    [ vim command ] Esc+i
-    
-    #!/bin/bash
-    user="hyperpelican"
-    for i in $(cat /home/hyperpelican/serverlist/servers.txt);
-    do 
-     ssh-copy-id -p 22 $user@$i;
-    done
-    
-    [ vim command ] :wq!
+    ./InstallPubKey.sh
     
 Scheduling
 ------------
