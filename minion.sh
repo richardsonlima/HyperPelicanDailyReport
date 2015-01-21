@@ -286,7 +286,7 @@ cat << CPUUSE
 <SMALL>
 <PRE>
 CPUUSE
-ps -auxf | sort -nr -k 3 | head -10
+ps auxf | sort -nr -k 3 | head -10
 cat << CPUUSEEND
 </PRE>
 </SMALL>
@@ -301,7 +301,7 @@ cat << MEMUSE
 <SMALL>
 <PRE>
 MEMUSE
-ps -auxf | sort -nr -k 4 | head -10
+ps auxf | sort -nr -k 4 | head -10
 cat << MEMUSEEND
 </PRE>
 </SMALL>
